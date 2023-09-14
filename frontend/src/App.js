@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/" element={<LandingPage />} />
           <Route path="/billing" element={<Billing />} />
           <Route path="/billwiseSummary" element={<BillwiseSummary />} />
-          <Route path="/modifyBill" element={<BillOperations />} />
+          <Route path="/billOps" element={<BillOperations />} />
           <Route path="/daywiseSummary" element={<DaywiseSummary />} />
           <Route path="/stockStatus" element={<StockStatus />} />
           <Route path="/about" element={<About />} />

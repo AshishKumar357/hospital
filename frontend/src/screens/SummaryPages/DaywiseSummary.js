@@ -78,7 +78,7 @@ const DaywiseSummary = () => {
               </Form.Select>
             </Col>
           </Form.Group>
-
+          <hr class="hr" />
           <Form.Group as={Row} className="mb-3">
             <Col sm={{ span: 10, offset: 3 }}>
               <Button type="submit">Submit</Button>

@@ -20,7 +20,7 @@ const LandingPage = () => {
         </div>
 
         <div className="tile">
-          <Link to="/modifyBill">
+          <Link to="/billOps">
             <img src={modiyBillImg} alt="ModifybillImg" />
             <p>Bill Operations</p>
           </Link>
