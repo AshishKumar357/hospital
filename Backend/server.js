@@ -1,5 +1,5 @@
 const express = require("express");
-const notes = require("./data/notes"); //tochange
+const notes = require("./data/notes");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
@@ -14,8 +14,8 @@ app.use(express.json());
 //   res.send("API is running.");
 // });
 
-app.get("/api/home", (req, res) => {
-  res.json(notes); //to change
+app.get("/api/notes", (req, res) => {
+  res.json(notes);
 });
 
 app.use("/api/users", userRoutes);

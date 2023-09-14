@@ -3,15 +3,18 @@ const User = require("../models/userModels.js");
 const generateToken = require("../utils/generateToken.js");
 const asyncHandler = require("express-async-handler");
 
-/*********************to Create User ************************ */
 const registerUser = async (req, res) => {
   const { name, email, password, pic } = req.body;
+
   const userExists = await User.findOne({ email });
+
   if (userExists) {
     res.status(400);
     throw new Error("User Already Exists");
   }
+
   const user = await User.create({ name, email, password, pic });
+
   if (user) {
     res.status(201).json({
       _id: user._id,
@@ -27,7 +30,6 @@ const registerUser = async (req, res) => {
   }
 };
 
-/*********************to Auth User ************************ */
 const authUser = async (req, res) => {
   const { email, password } = req.body;
 
@@ -45,30 +47,6 @@ const authUser = async (req, res) => {
   } else {
     console.error("Invalid UserName or Password");
     res.status(401).send("Invalid UserName or Password");
-  }
-};
-
-/*********************to create New Bill ************************ */
-const newBill = async (req, res) => {
-  const { name, email, password, pic } = req.body;
-  const userExists = await User.findOne({ email });
-  if (userExists) {
-    res.status(400);
-    throw new Error("User Already Exists");
-  }
-  const user = await User.create({ name, email, password, pic });
-  if (user) {
-    res.status(201).json({
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-      isAdmin: user.isAdmin,
-      pic: user.pic,
-      token: generateToken(user._id),
-    });
-  } else {
-    res.status(400);
-    throw new Error("Error Occurred");
   }
 };
 
