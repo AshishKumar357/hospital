@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import billImg from "../../Images/bill.jpg";
 import stockImg from "../../Images/stock.png";
 import aboutImg from "../../Images/about.png";
-import daySumImg from "../../Images/daySum.webp";
+import daySumImg from "../../Images/daySum.png";
 import modiyBillImg from "../../Images/modifyBill.png";
 import billSumImg from "../../Images/billSum.jpg";
 import "../LandingPage/LandingPage.css";
@@ -22,7 +22,7 @@ const LandingPage = () => {
         <div className="tile">
           <Link to="/modifyBill">
             <img src={modiyBillImg} alt="ModifybillImg" />
-            <p>Modify Bill</p>
+            <p>Bill Operations</p>
           </Link>
         </div>
 
