@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import LandingPage from "./screens/LandingPage/LandingPage";
+import Invoice from "./Components/Invoice/Invoice";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/daywiseSummary" element={<DaywiseSummary />} />
           <Route path="/stockStatus" element={<StockStatus />} />
           <Route path="/about" element={<About />} />
+          <Route exact path="/invoice/:invoiceId" element={<Invoice />} />
         </Routes>
       </main>
 

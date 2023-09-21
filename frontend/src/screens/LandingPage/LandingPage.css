@@ -25,3 +25,20 @@ p {
   font-weight: bold;
   text-align: center;
 }
+
+.LogoImgOnBill {
+  height: 120px;
+  width: 120px;
+  float: left;
+  margin-left: 10px;
+}
+
+.BillTotals {
+  float: left;
+  text-align: right;
+  padding-right: 60px;
+}
+
+.printBtn {
+  float: right;
+}
